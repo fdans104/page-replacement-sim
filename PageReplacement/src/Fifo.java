@@ -10,13 +10,13 @@ public class Fifo {
         int pageFaults = 0; //Default page faults set to 0.
         int pointer = 0;//Default pointer position set to 0.
 
-        //Every memory slot set to -1 (Granting it will be NULL)
+        //Every memory slot set to -1 (Default empty memory)
         for (int i = 0; i < capacity; i++) {
             memory[i] = -1;
         }
 
         for (int page : pages) {
-            //Sets page inMemory to false by Default. (It maybe change later)
+            //Sets page inMemory to false by Default.
             boolean pageInMemory = false;
 
             for (int i = 0; i < capacity; i++) {
